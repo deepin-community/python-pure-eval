@@ -1,15 +1,26 @@
-Source: template-repository
-Section: unknown
+Source: python-pure-eval
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Gordon Ball <gordon@chronitis.net>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-setuptools,
+ python3-setuptools-scm,
+ python3-pytest <!nocheck>,
+Standards-Version: 4.6.2
+Homepage: https://github.com/alexmojaki/pure_eval
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-pure-eval.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-pure-eval
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-pybuild
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-pure-eval
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Safely evaluate Python AST nodes without side effects
+ Python library to evaluate certain AST nodes without triggering arbitrary
+ code which might have unwanted side effects.

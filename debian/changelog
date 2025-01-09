@@ -1,5 +1,31 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-pure-eval (0.2.3-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream release:
+    - Explicitly remove the ctx attribute in copy_ast_without_context
+      (closes: #1082250).
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Colin Watson <cjwatson@debian.org>  Sun, 03 Nov 2024 17:58:16 +0000
+
+python-pure-eval (0.2.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/control: build-dep on setuptools-scm to fix wrong "0.0.0" version
+  * Standards-Version: 4.6.2 (routine-update)
+  * Build-Depends: s/dh-python/dh-sequence-python3/ (routine-update)
+  * d/upstream/metadata: add information about upstream's repo, issue tracker
+  * d/control: upgrade to autopkgtest-pkg-pybuild
+
+ -- Michael R. Crusoe <crusoe@debian.org>  Fri, 26 Apr 2024 14:19:06 +0200
+
+python-pure-eval (0.2.2-1) unstable; urgency=medium
+
+  * New upstream version 0.2.2
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 28 Jan 2022 08:21:31 +0000
+
+python-pure-eval (0.2.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1003716)
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 14 Jan 2022 11:36:10 +0000
